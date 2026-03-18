@@ -34,20 +34,21 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gray-50">
+    <section id="contact" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col lg:flex-row gap-16 items-start">
-          
-          <div className="w-full lg:w-1/3 space-y-8">
-            <div>
-              <h2 className="font-heading text-4xl font-black text-primary mb-6 leading-tight">
-                Pronto para o próximo nível?
-              </h2>
-              <p className="text-gray-600 text-lg leading-relaxed">
-                Preencha o formulário e você será redirecionado para o meu WhatsApp com todos os detalhes prontos para iniciarmos.
-              </p>
-            </div>
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="text-accent font-bold tracking-widest uppercase text-xs mb-3 block">Contato</span>
+          <h2 className="font-heading text-4xl font-black text-primary mb-6 leading-tight">
+            Pronto para o próximo nível?
+          </h2>
+          <p className="text-gray-600 text-lg leading-relaxed">
+            Preencha o formulário e você será redirecionado para o meu WhatsApp com todos os detalhes prontos para iniciarmos.
+          </p>
+        </div>
 
+        <div className="flex flex-col lg:flex-row gap-10 items-start">
+          
+          <div className="w-full lg:w-1/3">
             <div className="space-y-6">
               {[
                 { icon: Phone, title: "WhatsApp", value: "(19) 99630-1433" },

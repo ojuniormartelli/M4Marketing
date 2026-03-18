@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { MapPin, BarChart3, Smartphone, TrendingUp, Search, Target, X } from 'lucide-react';
+import { MapPin, BarChart3, Smartphone, TrendingUp, Search, Target, X, PenTool } from 'lucide-react';
 import { ServiceItem } from '../types.ts';
 import { WHATSAPP_LINK } from '../constants.ts';
 
 const services = [
   {
     title: 'Google Meu Negócio',
-    description: 'Apareça no topo quando clientes buscarem por seus serviços na sua cidade. Gestão de avaliações e fotos.',
+    description: 'Otimizamos seu perfil no Google Business Profile para aparecer no topo das buscas locais de forma orgânica, sem pagar por anúncios.',
     detailedDescription: 'O Google Meu Negócio (agora chamado Google Business Profile) é o perfil gratuito que aparece nas buscas do Google e no Maps quando alguém procura por uma empresa na sua cidade. Ter um perfil bem otimizado é essencial para aparecer antes da concorrência sem precisar pagar por anúncios. Na M4, fazemos a otimização completa do seu perfil: preenchemos todas as informações da empresa (endereço, horários, telefone, site, categoria e descrição), adicionamos palavras-chave estratégicas e garantimos que os dados estejam sempre corretos e atualizados. Nosso foco é posicionamento orgânico — colocar seu negócio no top das buscas locais. Não fazemos gerenciamento de fotos nem respondemos avaliações; entregamos a base sólida e otimizada para que o Google entenda exatamente o que você oferece e para quem.',
     icon: MapPin,
     color: 'bg-blue-500'
@@ -39,13 +39,20 @@ const services = [
     icon: TrendingUp,
     color: 'bg-orange-500'
   },
+  {
+    title: 'Criação de Criativos',
+    description: 'Desenvolvemos artes e copies para seus anúncios com foco em conversão, sem custo adicional no plano.',
+    detailedDescription: 'A criação de criativos é fundamental para o sucesso de qualquer campanha. Desenvolvemos artes e copies persuasivas, focadas em chamar a atenção do seu público-alvo e levá-lo à ação. Testamos diferentes abordagens para encontrar a que melhor performa para o seu negócio, garantindo que sua mensagem seja clara e impactante.',
+    icon: PenTool,
+    color: 'bg-pink-500'
+  },
 ];
 
 const Services: React.FC = () => {
   const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null);
 
   return (
-    <section id="services" className="py-24 bg-white relative overflow-hidden">
+    <section id="services" className="py-16 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-8 fade-in-section">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
@@ -59,7 +66,7 @@ const Services: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div 
               key={index} 

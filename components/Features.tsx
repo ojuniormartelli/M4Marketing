@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zap, Shield, Smartphone, Globe, BarChart, Layers, Target } from 'lucide-react';
+import { Zap, Shield, Smartphone, Globe, BarChart, Layers, Target, Headphones } from 'lucide-react';
 import { Feature } from '../types';
 
 const features: Feature[] = [
@@ -27,16 +27,21 @@ const features: Feature[] = [
     title: 'Otimização Contínua',
     description: 'Melhoramos seus anúncios diariamente para garantir o melhor custo por clique possível.',
     iconName: 'Zap'
+  },
+  {
+    title: 'Suporte Dedicado',
+    description: 'Você tem um consultor dedicado que conhece o seu negócio e está sempre disponível para orientar as decisões.',
+    iconName: 'Headphones'
   }
 ];
 
 const IconMap: Record<string, React.FC<any>> = {
-  Zap, Shield, Smartphone, Globe, BarChart, Layers, Target
+  Zap, Shield, Smartphone, Globe, BarChart, Layers, Target, Headphones
 };
 
 export const Features: React.FC = () => {
   return (
-    <section id="features" className="py-24 bg-white">
+    <section id="features" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-indigo-600 font-semibold tracking-wide uppercase text-sm">Recursos</h2>
@@ -44,7 +49,7 @@ export const Features: React.FC = () => {
             Tudo o que você precisa para crescer
           </h3>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-            Ferramentas poderosas desenhadas para desenvolvedores e times de marketing.
+            Tudo o que você precisa para atrair mais clientes para o seu negócio local todos os dias.
           </p>
         </div>
 

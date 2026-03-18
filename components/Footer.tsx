@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
               <img
                 src={logoUrl}
                 alt="M4 Marketing Digital"
-                className="h-full w-auto opacity-70 grayscale hover:grayscale-0 transition-all object-contain duration-500"
+                className="h-full w-auto opacity-70 grayscale hover:grayscale-0 transition-all object-contain duration-500 brightness-0 invert"
               />
             </div>
           ) : (

@@ -8,8 +8,8 @@ const About: React.FC = () => {
   return (
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4 md:px-8 fade-in-section">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          <div className="w-full lg:w-1/2 relative flex justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 lg:gap-20">
+          <div className="relative flex justify-center">
             {/* Background Decorativo */}
             <div className="absolute inset-0 bg-primary/5 rounded-[2rem] transform rotate-2 scale-105"></div>
             
@@ -39,7 +39,7 @@ const About: React.FC = () => {
             </div>
           </div>
           
-          <div className="w-full lg:w-1/2">
+          <div>
             <span className="text-primary font-bold tracking-wider uppercase text-sm mb-2 block">Especialista</span>
             <h2 className="font-heading text-4xl font-black text-gray-900 mb-6">Especialista em Negócios Locais de Itapira e Região.</h2>
             <p className="text-gray-600 text-lg mb-6 leading-relaxed">
