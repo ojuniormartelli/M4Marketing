@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-accent opacity-5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-blue-400 opacity-5 rounded-full blur-3xl"></div>
 
-      <div className="container mx-auto px-4 md:px-8 relative z-30 text-center fade-in-section">
+      <div className="max-w-6xl mx-auto px-6 relative z-30 text-center fade-in-section">
         <div className="max-w-4xl mx-auto">
           <span className="inline-block bg-accent/20 border border-accent/30 px-4 py-1.5 rounded-full text-xs md:text-sm font-bold mb-6 text-accent backdrop-blur-md shadow-sm">
             Especialista em Negócios Locais

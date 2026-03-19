@@ -13,7 +13,7 @@ const services = [
   },
   {
     title: 'Anúncios (Google & Meta)',
-    description: 'Campanhas diretas ao ponto. Colocamos seu anúncio na frente de quem já quer comprar de você.',
+    description: 'Criamos, gerenciamos e otimizamos suas campanhas no Google Ads e Meta Ads. Cuidamos de tudo: segmentação, lances e acompanhamento diário para maximizar seu ROI.',
     detailedDescription: 'Nossas campanhas de tráfego pago são desenhadas para trazer retorno rápido. No Google Ads, capturamos a demanda de quem já está procurando pelo que você oferece. No Meta Ads (Instagram e Facebook), criamos desejo e alcançamos seu público-alvo ideal com criativos de alta conversão. Foco total em gerar leads qualificados para o seu WhatsApp.',
     icon: Target,
     color: 'bg-red-500'
@@ -33,18 +33,12 @@ const services = [
     color: 'bg-green-500'
   },
   {
-    title: 'Gestão de Tráfego Pago',
-    description: 'Gerenciamos seu orçamento de anúncios no Google e Meta para maximizar o ROI e trazer clientes qualificados todos os dias.',
-    detailedDescription: 'A gestão profissional de tráfego envolve análise diária, testes A/B e otimização constante do seu orçamento. Não apenas "subimos anúncios", nós analisamos o funil completo do seu negócio para garantir que cada real investido traga o máximo de retorno possível (ROI). Relatórios claros e estratégia baseada em dados reais.',
-    icon: TrendingUp,
-    color: 'bg-orange-500'
-  },
-  {
-    title: 'Criação de Criativos',
-    description: 'Desenvolvemos artes e copies para seus anúncios com foco em conversão, sem custo adicional no plano.',
-    detailedDescription: 'A criação de criativos é fundamental para o sucesso de qualquer campanha. Desenvolvemos artes e copies persuasivas, focadas em chamar a atenção do seu público-alvo e levá-lo à ação. Testamos diferentes abordagens para encontrar a que melhor performa para o seu negócio, garantindo que sua mensagem seja clara e impactante.',
-    icon: PenTool,
-    color: 'bg-pink-500'
+    title: 'Consultoria em Marketing Digital',
+    description: 'Começamos com um diagnóstico gratuito da sua presença digital e, com base nisso, montamos um plano estratégico personalizado para atrair mais clientes com o menor custo possível.',
+    detailedDescription: 'Toda nossa consultoria começa com um diagnóstico gratuito da sua presença digital, onde analisamos onde o seu negócio está e para onde ele precisa ir. Na M4, realizamos uma análise completa da sua presença digital, concorrência local e oportunidades de mercado. Com base nesse diagnóstico, montamos um plano estratégico personalizado com os melhores canais, investimentos recomendados e metas realistas para atrair mais clientes com o menor custo possível. A consultoria é o primeiro passo de todos os nossos clientes — é onde definimos juntos o caminho certo antes de acelerar.',
+    icon: Target,
+    color: 'bg-pink-500',
+    modalButtonText: 'Agendar consultoria gratuita'
   },
 ];
 
@@ -53,7 +47,7 @@ const Services: React.FC = () => {
 
   return (
     <section id="services" className="py-16 bg-white relative overflow-hidden">
-      <div className="container mx-auto px-4 md:px-8 fade-in-section">
+      <div className="max-w-6xl mx-auto px-6 fade-in-section">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
             <span className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-3 block">Expertise</span>
@@ -71,7 +65,13 @@ const Services: React.FC = () => {
             <div 
               key={index} 
               className="group p-10 rounded-3xl bg-gray-50 hover:bg-primary transition-all duration-500 border border-gray-100 relative overflow-hidden cursor-pointer"
-              onClick={() => setSelectedService(service)}
+              onClick={() => {
+                if ('directLink' in service && service.directLink) {
+                  window.open(WHATSAPP_LINK, '_blank');
+                } else {
+                  setSelectedService(service);
+                }
+              }}
             >
               <div className={`absolute top-0 right-0 w-32 h-32 ${service.color} opacity-5 -mr-16 -mt-16 rounded-full group-hover:scale-150 transition-transform duration-700`}></div>
               
@@ -107,7 +107,9 @@ const Services: React.FC = () => {
                 <selectedService.icon className="text-primary" size={40} />
               </div>
 
-              <h3 className="font-heading text-3xl md:text-4xl font-black text-gray-900 mb-6">{selectedService.title}</h3>
+              <h3 className="font-heading text-3xl md:text-4xl font-black text-gray-900 mb-6">
+                {selectedService.title}
+              </h3>
               
               <div className="space-y-4 text-gray-600 text-lg leading-relaxed mb-10">
                 {selectedService.detailedDescription.split('. ').map((paragraph, i) => (
@@ -121,7 +123,7 @@ const Services: React.FC = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-primary hover:bg-blue-800 text-white font-black py-5 px-10 rounded-2xl transition-all shadow-xl hover:-translate-y-1 w-full gap-3 text-xl"
               >
-                Falar com especialista
+                {('modalButtonText' in selectedService && selectedService.modalButtonText) ? selectedService.modalButtonText : 'Falar com especialista'}
                 <Smartphone size={24} />
               </a>
             </div>

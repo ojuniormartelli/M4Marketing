@@ -42,7 +42,7 @@ const IconMap: Record<string, React.FC<any>> = {
 export const Features: React.FC = () => {
   return (
     <section id="features" className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-indigo-600 font-semibold tracking-wide uppercase text-sm">Recursos</h2>
           <h3 className="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">

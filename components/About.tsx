@@ -7,8 +7,8 @@ const About: React.FC = () => {
 
   return (
     <section id="about" className="py-20 bg-white">
-      <div className="container mx-auto px-4 md:px-8 fade-in-section">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 lg:gap-20">
+      <div className="max-w-6xl mx-auto px-6 fade-in-section">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
           <div className="relative flex justify-center">
             {/* Background Decorativo */}
             <div className="absolute inset-0 bg-primary/5 rounded-[2rem] transform rotate-2 scale-105"></div>

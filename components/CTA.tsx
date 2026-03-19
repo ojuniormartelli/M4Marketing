@@ -5,7 +5,7 @@ import { WHATSAPP_LINK } from '../constants.ts';
 const CTA: React.FC = () => {
   return (
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-4 md:px-8">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="bg-primary rounded-[2.5rem] p-8 md:p-16 text-center relative overflow-hidden shadow-2xl shadow-blue-900/20 fade-in-section">
           {/* Elementos Decorativos */}
           <div className="absolute top-0 left-0 w-64 h-64 bg-accent opacity-10 -ml-32 -mt-32 rounded-full blur-3xl"></div>
