@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4 md:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-accent font-bold tracking-widest uppercase text-xs mb-3 block">Contato</span>
           <h2 className="font-heading text-4xl font-black text-primary mb-6 leading-tight">
