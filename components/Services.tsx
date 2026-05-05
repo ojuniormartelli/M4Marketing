@@ -1,137 +1,102 @@
-import React, { useState } from 'react';
-import { MapPin, BarChart3, Smartphone, TrendingUp, Search, Target, X, PenTool } from 'lucide-react';
-import { ServiceItem } from '../types.ts';
+import React from 'react';
+import { Search, Settings, TrendingUp, BarChart3, ArrowRight } from 'lucide-react';
 import { WHATSAPP_LINK } from '../constants.ts';
 
-const services = [
+const steps = [
   {
-    title: 'Google Meu Negócio',
-    description: 'Otimizamos seu perfil no Google Business Profile para aparecer no topo das buscas locais de forma orgânica, sem pagar por anúncios.',
-    detailedDescription: 'O Google Meu Negócio (agora chamado Google Business Profile) é o perfil gratuito que aparece nas buscas do Google e no Maps quando alguém procura por uma empresa na sua cidade. Ter um perfil bem otimizado é essencial para aparecer antes da concorrência sem precisar pagar por anúncios. Na M4, fazemos a otimização completa do seu perfil: preenchemos todas as informações da empresa (endereço, horários, telefone, site, categoria e descrição), adicionamos palavras-chave estratégicas e garantimos que os dados estejam sempre corretos e atualizados. Nosso foco é posicionamento orgânico — colocar seu negócio no top das buscas locais. Não fazemos gerenciamento de fotos nem respondemos avaliações; entregamos a base sólida e otimizada para que o Google entenda exatamente o que você oferece e para quem.',
-    icon: MapPin,
+    number: "01",
+    title: 'Diagnóstico e Estratégia Local',
+    description: 'Analisamos sua oferta, quem são seus concorrentes diretos e como as pessoas buscam pelo seu serviço na sua cidade ou bairro. A partir disso, criamos o plano de ataque ideal para o seu orçamento.',
+    icon: Search,
     color: 'bg-blue-500'
   },
   {
-    title: 'Anúncios (Google & Meta)',
-    description: 'Criamos, gerenciamos e otimizamos suas campanhas no Google Ads e Meta Ads. Cuidamos de tudo: segmentação, lances e acompanhamento diário para maximizar seu ROI.',
-    detailedDescription: 'Nossas campanhas de tráfego pago são desenhadas para trazer retorno rápido. No Google Ads, capturamos a demanda de quem já está procurando pelo que você oferece. No Meta Ads (Instagram e Facebook), criamos desejo e alcançamos seu público-alvo ideal com criativos de alta conversão. Foco total em gerar leads qualificados para o seu WhatsApp.',
-    icon: Target,
-    color: 'bg-red-500'
+    number: "02",
+    title: 'Configuração e Ativação',
+    description: 'Colocamos a mão na massa na parte técnica. Montamos seus anúncios no Google e na Meta Ads com foco total em converter o clique em mensagem no WhatsApp ou em uma ligação para sua empresa.',
+    icon: Settings,
+    color: 'bg-accent'
   },
   {
-    title: 'Sites & Landing Pages',
-    description: 'Desenvolvimento de páginas ultra-rápidas e otimizadas para converter visitantes em clientes no WhatsApp.',
-    detailedDescription: 'Sua presença digital começa com uma página que converte. Desenvolvemos Landing Pages ultra-rápidas, focadas em um único objetivo: transformar o visitante em um contato no seu WhatsApp. Design moderno, carregamento otimizado e copy persuasiva para garantir que seu investimento em anúncios não seja desperdiçado.',
-    icon: Smartphone,
-    color: 'bg-purple-500'
+    number: "03",
+    title: 'Gestão e Otimização Diária',
+    description: 'Anúncio bom é anúncio acompanhado. Monitoramos suas campanhas diariamente, ajustando públicos, palavras-chave e verbas para garantir que você não jogue dinheiro fora e atraia apenas leads qualificados.',
+    icon: TrendingUp,
+    color: 'bg-indigo-500'
   },
   {
-    title: 'SEO Local',
-    description: 'Estratégias para que seu site ganhe autoridade orgânica e apareça gratuitamente nas buscas.',
-    detailedDescription: 'SEO Local é o jogo de longo prazo para dominar as buscas orgânicas. Trabalhamos a autoridade do seu site e do seu perfil no Google para que você seja a autoridade máxima no seu segmento dentro da sua cidade. Menos dependência de anúncios pagos e mais tráfego qualificado chegando de forma gratuita todos os meses.',
-    icon: Search,
+    number: "04",
+    title: 'Relatórios e Ajustes Estratégicos',
+    description: 'Apresentamos o que realmente importa: quantos contatos chegaram e qual foi o custo por oportunidade. Com base nisso, definimos juntos os próximos passos para escalar seus resultados conforme o seu negócio cresce.',
+    icon: BarChart3,
     color: 'bg-green-500'
-  },
-  {
-    title: 'Consultoria em Marketing Digital',
-    description: 'Começamos com um diagnóstico gratuito da sua presença digital e, com base nisso, montamos um plano estratégico personalizado para atrair mais clientes com o menor custo possível.',
-    detailedDescription: 'Toda nossa consultoria começa com um diagnóstico gratuito da sua presença digital, onde analisamos onde o seu negócio está e para onde ele precisa ir. Na M4, realizamos uma análise completa da sua presença digital, concorrência local e oportunidades de mercado. Com base nesse diagnóstico, montamos um plano estratégico personalizado com os melhores canais, investimentos recomendados e metas realistas para atrair mais clientes com o menor custo possível. A consultoria é o primeiro passo de todos os nossos clientes — é onde definimos juntos o caminho certo antes de acelerar.',
-    icon: Target,
-    color: 'bg-pink-500',
-    modalButtonText: 'Agendar consultoria gratuita'
-  },
+  }
 ];
 
 const Services: React.FC = () => {
-  const [selectedService, setSelectedService] = useState<typeof services[0] | null>(null);
-
   return (
-    <section id="services" className="py-16 bg-white relative overflow-hidden">
-      <div className="max-w-6xl mx-auto px-6 fade-in-section">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div className="max-w-2xl">
-            <span className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-3 block">Expertise</span>
-            <h2 className="font-heading text-4xl md:text-5xl font-black text-gray-900 leading-tight">
-              Como vou fazer sua empresa <span className="text-primary">vender mais</span>
-            </h2>
-          </div>
-          <p className="text-gray-500 text-lg max-w-sm">
-            Estratégias de quem entende o dia a dia do pequeno e médio empresário brasileiro.
+    <section id="methodology" className="py-24 bg-gray-50 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-20 fade-in-section">
+          <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-4">Metodologia</h2>
+          <h3 className="text-3xl md:text-5xl font-black text-primary leading-tight tracking-tighter mb-6">
+            Como vamos fazer sua empresa vender mais
+          </h3>
+          <p className="text-gray-600 text-lg md:text-xl font-medium">
+            Um processo simples e direto, desenhado para o empresário local que não quer complicação técnica, apenas contatos reais no balcão e no WhatsApp.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-20">
+          {steps.map((step, index) => (
             <div 
               key={index} 
-              className="group p-10 rounded-3xl bg-gray-50 hover:bg-primary transition-all duration-500 border border-gray-100 relative overflow-hidden cursor-pointer"
-              onClick={() => {
-                if ('directLink' in service && service.directLink) {
-                  window.open(WHATSAPP_LINK, '_blank');
-                } else {
-                  setSelectedService(service);
-                }
-              }}
+              className="flex gap-6 p-8 bg-white rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group"
             >
-              <div className={`absolute top-0 right-0 w-32 h-32 ${service.color} opacity-5 -mr-16 -mt-16 rounded-full group-hover:scale-150 transition-transform duration-700`}></div>
-              
-              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
-                <service.icon className="text-primary" size={32} />
+              <div className="flex-shrink-0">
+                <div className={`w-16 h-16 ${step.color} rounded-2xl flex items-center justify-center text-white shadow-lg shadow-current/20 group-hover:scale-110 transition-transform duration-300`}>
+                  <step.icon size={32} />
+                </div>
               </div>
-              
-              <h3 className="font-heading text-2xl font-bold text-gray-900 mb-4 group-hover:text-white transition-colors">{service.title}</h3>
-              <p className="text-gray-600 text-lg leading-relaxed group-hover:text-blue-100 transition-colors">{service.description}</p>
-              
-              <div className="mt-8 flex items-center gap-2 text-primary group-hover:text-white font-bold">
-                <span>Saber mais</span>
-                <TrendingUp size={18} className="transform group-hover:translate-x-1 transition-transform" />
+              <div>
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-accent font-black text-xl opacity-40">{step.number}</span>
+                  <h4 className="text-2xl font-black text-primary tracking-tight leading-tight">
+                    {step.title}
+                  </h4>
+                </div>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  {step.description}
+                </p>
               </div>
             </div>
           ))}
         </div>
-      </div>
 
-      {/* Modal */}
-      {selectedService && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl animate-scale-up">
-            <button 
-              onClick={() => setSelectedService(null)}
-              className="absolute top-6 right-6 p-2 rounded-full bg-gray-100 text-gray-500 hover:bg-primary hover:text-white transition-all duration-300 z-10"
+        <div className="bg-primary rounded-[3rem] p-10 md:p-16 text-center text-white relative overflow-hidden">
+          {/* Decoração sutil */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent opacity-10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
+          
+          <div className="relative z-10 max-w-3xl mx-auto">
+            <h4 className="text-2xl md:text-3xl font-bold mb-10 leading-relaxed italic opacity-90">
+              "Se fizer sentido para você, o próximo passo é uma conversa rápida para entender seu negócio e ver se a M4 é a parceira certa."
+            </h4>
+            
+            <a 
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-accent hover:bg-accentHover text-white text-xl font-black py-6 px-12 rounded-full shadow-2xl transition-all duration-300 transform hover:-translate-y-1 gap-3 group"
             >
-              <X size={24} />
-            </button>
-
-            <div className="p-8 md:p-12">
-              <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-8">
-                <selectedService.icon className="text-primary" size={40} />
-              </div>
-
-              <h3 className="font-heading text-3xl md:text-4xl font-black text-gray-900 mb-6">
-                {selectedService.title}
-              </h3>
-              
-              <div className="space-y-4 text-gray-600 text-lg leading-relaxed mb-10">
-                {selectedService.detailedDescription.split('. ').map((paragraph, i) => (
-                  <p key={i}>{paragraph}.</p>
-                ))}
-              </div>
-
-              <a 
-                href={WHATSAPP_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-primary hover:bg-blue-800 text-white font-black py-5 px-10 rounded-2xl transition-all shadow-xl hover:-translate-y-1 w-full gap-3 text-xl"
-              >
-                {('modalButtonText' in selectedService && selectedService.modalButtonText) ? selectedService.modalButtonText : 'Falar com especialista'}
-                <Smartphone size={24} />
-              </a>
-            </div>
+              Falar com o Especialista Agora
+              <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
+            </a>
           </div>
         </div>
-      )}
+      </div>
     </section>
   );
 };
 
 export default Services;
+

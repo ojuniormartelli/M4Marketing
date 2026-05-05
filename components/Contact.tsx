@@ -1,125 +1,64 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, MessageCircle, ArrowRight, Loader2 } from 'lucide-react';
-import { WHATSAPP_NUMBER } from '../constants.ts';
+import React from 'react';
+import { MessageCircle, ArrowRight, Clock, ShieldCheck, Zap } from 'lucide-react';
+import { WHATSAPP_LINK } from '../constants.ts';
 
 const Contact: React.FC = () => {
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
-    
-    const formData = new FormData(e.currentTarget);
-    const name = formData.get('name') as string;
-    const phone = formData.get('phone') as string;
-    const email = formData.get('email') as string;
-    const segment = formData.get('segment') as string;
-    const message = formData.get('message') as string;
-
-    // Formatação da mensagem para o WhatsApp
-    const text = `*Novo Contato - M4 Digital*%0A%0A` +
-                 `*Nome:* ${name}%0A` +
-                 `*WhatsApp:* ${phone}%0A` +
-                 `*E-mail:* ${email}%0A` +
-                 `*Segmento:* ${segment}%0A%0A` +
-                 `*Objetivo:* ${message}`;
-
-    const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
-    
-    // Simula um pequeno loading para feedback visual
-    setTimeout(() => {
-      window.open(waLink, '_blank');
-      setLoading(false);
-    }, 800);
-  };
-
   return (
-    <section id="contact" className="py-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-accent font-bold tracking-widest uppercase text-xs mb-3 block">Contato</span>
-          <h2 className="font-heading text-4xl font-black text-primary mb-6 leading-tight">
-            Pronto para o próximo nível?
-          </h2>
-          <p className="text-gray-600 text-lg leading-relaxed">
-            Preencha o formulário e você será redirecionado para o meu WhatsApp com todos os detalhes prontos para iniciarmos.
-          </p>
-        </div>
-
-        <div className="flex flex-col lg:flex-row gap-10 items-start">
+    <section id="contact" className="py-24 bg-gray-50 overflow-hidden relative">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="bg-primary rounded-[3rem] p-8 md:p-20 text-white shadow-2xl relative overflow-hidden">
+          {/* Decoração de fundo */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-accent opacity-10 rounded-full -mr-48 -mt-48 blur-[100px]"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-400 opacity-5 rounded-full -ml-32 -mb-32 blur-[80px]"></div>
           
-          <div className="w-full lg:w-1/3">
-            <div className="space-y-6">
-              {[
-                { icon: Phone, title: "WhatsApp", value: "(19) 99630-1433" },
-                { icon: Mail, title: "E-mail", value: "juniormartelli.m4@gmail.com" },
-                { icon: MapPin, title: "Localização", value: "Itapira, SP" }
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-4 group">
-                  <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-primary">
-                    <item.icon size={22} />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div className="fade-in-section">
+              <span className="text-accent font-black tracking-widest uppercase text-sm mb-6 block">Próximo Passo</span>
+              <h2 className="text-3xl md:text-5xl font-black leading-tight tracking-tighter mb-8">
+                Pronto para atrair mais clientes para o seu negócio local?
+              </h2>
+              <p className="text-blue-100 text-lg md:text-xl leading-relaxed mb-10 opacity-90">
+                Se você quer parar de depender só de indicação e começar a ter um fluxo constante de contatos pelo Google e pelas redes, o próximo passo é simples. Vamos fazer uma conversa rápida para entender seu negócio, ver se a M4 é a parceira certa e qual é o melhor plano para começar.
+              </p>
+              
+              <div className="space-y-4">
+                {[
+                  { icon: ShieldCheck, text: "Atendimento direto com especialista" },
+                  { icon: Zap, text: "Foco 100% em ROI e faturamento" },
+                  { icon: Clock, text: "Sem contratos abusivos ou burocracia" }
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3 text-blue-100/80">
+                    <item.icon size={20} className="text-accent" />
+                    <span className="font-medium">{item.text}</span>
                   </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest text-gray-400">{item.title}</p>
-                    <p className="text-gray-900 font-bold">{item.value}</p>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div className="w-full lg:w-2/3">
-            <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-blue-900/5 border border-gray-100">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-gray-700 ml-1">Seu Nome</label>
-                    <input name="name" type="text" required placeholder="Ex: João Silva" className="w-full px-5 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-primary/20 outline-none transition-all" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-gray-700 ml-1">Seu WhatsApp</label>
-                    <input name="phone" type="tel" required placeholder="(00) 00000-0000" className="w-full px-5 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-primary/20 outline-none transition-all" />
-                  </div>
+            <div className="flex flex-col items-center lg:items-end fade-in-section">
+              <div className="bg-white/5 backdrop-blur-md border border-white/10 p-8 md:p-12 rounded-[2.5rem] w-full max-w-md text-center">
+                <div className="w-20 h-20 bg-accent rounded-3xl flex items-center justify-center text-white mx-auto mb-8 shadow-xl shadow-accent/20">
+                  <MessageCircle size={40} />
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-gray-700 ml-1">E-mail</label>
-                    <input name="email" type="email" required placeholder="voce@empresa.com" className="w-full px-5 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-primary/20 outline-none transition-all" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-bold text-gray-700 ml-1">Segmento do Negócio</label>
-                    <select name="segment" required className="w-full px-5 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none">
-                      <option value="">Selecione...</option>
-                      <option value="Alimentação">Alimentação</option>
-                      <option value="Saúde e Beleza">Saúde e Beleza</option>
-                      <option value="Construção Civil">Construção Civil</option>
-                      <option value="Educação">Educação</option>
-                      <option value="Varejo">Varejo</option>
-                      <option value="Serviços Locais">Serviços Locais</option>
-                      <option value="Outro">Outro</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-bold text-gray-700 ml-1">Como posso te ajudar?</label>
-                  <textarea name="message" rows={4} placeholder="Conte um pouco sobre seu negócio..." className="w-full px-5 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-primary/20 outline-none transition-all resize-none"></textarea>
-                </div>
-
-                <button 
-                  type="submit"
-                  disabled={loading}
-                  className="w-full bg-accent hover:bg-accentHover text-white font-black py-5 rounded-xl shadow-lg transition-all transform hover:-translate-y-1 flex items-center justify-center gap-3 text-xl"
+                
+                <h4 className="text-2xl font-black mb-6">Inicie sua consultoria gratuita agora</h4>
+                
+                <a 
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-accent hover:bg-accentHover text-white text-xl font-black py-6 px-4 rounded-2xl shadow-xl transition-all duration-300 transform hover:-translate-y-1 block mb-4 group"
                 >
-                  {loading ? <Loader2 className="animate-spin" size={24} /> : (
-                    <>
-                      Enviar via WhatsApp
-                      <MessageCircle size={22} />
-                    </>
-                  )}
-                </button>
-              </form>
+                  <span className="flex items-center justify-center gap-3">
+                    Falar com o especialista agora
+                    <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </a>
+                
+                <p className="text-blue-200/60 text-sm font-medium">
+                  Atendimento direto pelo WhatsApp, em horário comercial.
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -43,33 +43,37 @@ const Hero: React.FC = () => {
 
       <div className="max-w-6xl mx-auto px-6 relative z-30 text-center fade-in-section">
         <div className="max-w-4xl mx-auto">
-          <span className="inline-block bg-accent/20 border border-accent/30 px-4 py-1.5 rounded-full text-xs md:text-sm font-bold mb-6 text-accent backdrop-blur-md shadow-sm">
+          <span className="inline-block bg-white border border-accent/30 px-4 py-1.5 rounded-full text-lg font-bold mb-6 text-accent backdrop-blur-md shadow-sm">
             Especialista em Negócios Locais
           </span>
           
           <h1 className="font-heading text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-8 drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)]">
-            Transforme seu Negócio Local em <span className="text-accent text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400">Referência na Região</span>
+            Gestão de anúncios no Google e Meta Ads para negócios locais que precisam de <span className="text-accent text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400">mais orçamentos e clientes</span> na sua cidade.
           </h1>
           
-          <p className="text-lg md:text-2xl text-blue-50 mb-12 max-w-2xl mx-auto leading-relaxed font-medium drop-shadow-md">
-            Pare de gastar dinheiro com curtidas. Implemente estratégias de marketing digital validadas para atrair clientes reais e aumentar suas vendas.
+          <p className="text-lg md:text-2xl text-blue-50 mb-12 max-w-3xl mx-auto leading-relaxed font-medium drop-shadow-md">
+            Pare de gastar dinheiro com anúncios que geram apenas curtidas e comentários vazios. A M4 gerencia seus anúncios para atrair contatos reais e qualificados no seu WhatsApp, telefone ou balcão, focando no que realmente importa: o seu faturamento.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <a 
               href="#contact"
               className="w-full sm:w-auto bg-accent hover:bg-accentHover text-white text-xl font-bold py-5 px-12 rounded-full shadow-lg shadow-accent/20 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2"
             >
-              Quero Vender Mais
+              Quero atrair mais clientes qualificados
               <ArrowRight size={24} />
             </a>
             <a 
               href="#services"
               className="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xl font-semibold py-5 px-12 rounded-full backdrop-blur-sm transition-all duration-300 flex items-center justify-center"
             >
-              Conhecer Serviços
+              Ver como funciona na prática
             </a>
           </div>
+
+          <p className="text-blue-200/80 text-sm md:text-base italic mb-16 font-medium">
+            Atendimento direto e estratégico, sem "marketês", focado 100% no seu retorno.
+          </p>
 
           {/* Contador de Resultados */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 py-8 border-y border-white/10 max-w-3xl mx-auto">

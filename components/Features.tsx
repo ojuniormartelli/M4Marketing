@@ -4,33 +4,23 @@ import { Feature } from '../types';
 
 const features: Feature[] = [
   {
-    title: 'Relatórios Semanais',
-    description: 'Transparência total com dados claros sobre o desempenho das suas campanhas toda semana.',
-    iconName: 'BarChart'
-  },
-  {
-    title: 'Atendimento via WhatsApp',
-    description: 'Suporte direto e rápido. Estamos a uma mensagem de distância para tirar suas dúvidas.',
-    iconName: 'Smartphone'
-  },
-  {
-    title: 'Estratégia Personalizada',
-    description: 'Não acreditamos em fórmulas prontas. Criamos estratégias específicas para o seu segmento.',
+    title: 'Anúncios para quem quer comprar',
+    description: 'Chega de aparecer para curiosos. Configuramos suas campanhas no Google e na Meta para alcançar pessoas que já estão buscando pelo seu serviço ou produto na sua região agora mesmo.',
     iconName: 'Target'
   },
   {
-    title: 'Foco em Negócios Locais',
-    description: 'Especialistas em atrair clientes que estão fisicamente perto da sua empresa.',
-    iconName: 'Globe'
+    title: 'Relatórios sem "marketês"',
+    description: 'Nada de termos técnicos que você não entende. Você acompanha o desempenho através de dados claros: quantos orçamentos chegaram e qual o seu retorno real.',
+    iconName: 'BarChart'
   },
   {
-    title: 'Otimização Contínua',
-    description: 'Melhoramos seus anúncios diariamente para garantir o melhor custo por clique possível.',
+    title: 'Suas campanhas nunca param',
+    description: 'O mercado digital muda rápido. Fazemos otimizações frequentes para garantir que seu investimento esteja sempre gerando o máximo de contatos pelo menor custo.',
     iconName: 'Zap'
   },
   {
-    title: 'Suporte Dedicado',
-    description: 'Você tem um consultor dedicado que conhece o seu negócio e está sempre disponível para orientar as decisões.',
+    title: 'Parceria direta e estratégica',
+    description: 'Você não fala com robôs ou estagiários. Aqui você tem contato direto com quem planeja e executa suas campanhas, garantindo agilidade e foco no seu resultado.',
     iconName: 'Headphones'
   }
 ];
@@ -41,28 +31,28 @@ const IconMap: Record<string, React.FC<any>> = {
 
 export const Features: React.FC = () => {
   return (
-    <section id="features" className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="features" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-indigo-600 font-semibold tracking-wide uppercase text-sm">Recursos</h2>
-          <h3 className="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">
-            Tudo o que você precisa para crescer
+          <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-4">Vantagens</h2>
+          <h3 className="text-3xl md:text-5xl font-black leading-tight tracking-tighter text-primary">
+            Tudo o que você precisa para atrair clientes todos os dias
           </h3>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
-            Tudo o que você precisa para atrair mais clientes para o seu negócio local todos os dias.
+          <p className="mt-6 text-lg md:text-xl text-gray-600 font-medium">
+            Enquanto você cuida da operação do seu negócio, a M4 cuida da inteligência dos anúncios para trazer orçamentos qualificados.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
           {features.map((feature, index) => {
             const Icon = IconMap[feature.iconName];
             return (
-              <div key={index} className="flex flex-col p-8 bg-gray-50 rounded-2xl hover:bg-indigo-50 transition-colors duration-300 border border-transparent hover:border-indigo-100 group">
-                <div className="flex items-center justify-center h-12 w-12 rounded-xl bg-indigo-100 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300 mb-6">
-                  <Icon className="h-6 w-6" />
+              <div key={index} className="group p-10 bg-gray-50 rounded-3xl border border-gray-100 hover:border-accent/20 hover:bg-accent/[0.02] transition-all duration-300">
+                <div className="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center text-accent mb-8 group-hover:bg-accent group-hover:text-white transition-all duration-300 transform group-hover:rotate-3">
+                  <Icon className="h-8 w-8" />
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h4>
-                <p className="text-gray-600 leading-relaxed">
+                <h4 className="text-2xl font-black text-primary mb-4 leading-tight">{feature.title}</h4>
+                <p className="text-gray-600 leading-relaxed text-lg">
                   {feature.description}
                 </p>
               </div>
