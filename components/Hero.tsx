@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
               <ArrowRight size={24} />
             </a>
             <a 
-              href="#services"
+              href="#methodology"
               className="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xl font-semibold py-5 px-12 rounded-full backdrop-blur-sm transition-all duration-300 flex items-center justify-center"
             >
               Ver como funciona na prática

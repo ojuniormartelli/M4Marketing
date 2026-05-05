@@ -15,8 +15,8 @@ export const DRIVE_IDS = {
 
 export const NAVIGATION_LINKS: NavLink[] = [
   { label: 'Início', href: '#home' },
-  { label: 'Serviços', href: '#services' },
-  { label: 'Sobre', href: '#about' },
+  { label: 'Metodologia', href: '#methodology' },
+  { label: 'Valores', href: '#pricing' },
   { label: 'Depoimentos', href: '#testimonials' },
   { label: 'Contato', href: '#contact' },
 ];

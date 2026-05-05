@@ -1,45 +1,74 @@
 import React from 'react';
+import { CircleDollarSign, Info } from 'lucide-react';
 
 export const Pricing: React.FC = () => {
+  const tiers = [
+    { inv: 'R$ 600 – R$ 799', fee: 'R$ 600' },
+    { inv: 'R$ 800 – R$ 999', fee: 'R$ 800' },
+    { inv: 'R$ 1.000 – R$ 1.999', fee: 'R$ 1.000' },
+    { inv: 'R$ 2.000 – R$ 3.999', fee: 'R$ 1.200' },
+    { inv: 'R$ 4.000 – R$ 9.999', fee: 'R$ 1.500' },
+    { inv: 'Acima de R$ 10.000', fee: '15% do investimento' },
+  ];
+
   return (
-    <section id="pricing" className="py-24 bg-secondary text-white">
-      <div className="max-w-6xl mx-auto px-6 fade-in-section">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-black sm:text-5xl font-heading mb-4">Investimento em <span className="text-accent">Gestão</span></h2>
-          <p className="mt-4 text-xl text-gray-400 max-w-2xl mx-auto">
-            Confira o valor de gestão de acordo com o seu investimento em anúncios:
+    <section id="pricing" className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6 fade-in-section">
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-4">Investimento Local</h2>
+          <h3 className="text-3xl md:text-5xl font-black text-primary leading-tight tracking-tighter mb-6">
+            Quanto investir para anunciar com a M4
+          </h3>
+          <p className="text-gray-600 text-lg md:text-xl font-medium">
+            Trabalhamos com valores transparentes e proporcionais ao momento do seu negócio. A taxa de gestão acompanha o valor investido em anúncios, mantendo um modelo justo tanto para quem está começando quanto para quem já quer acelerar.
           </p>
         </div>
 
-        {/* Nota e Tabela de Referência */}
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden mb-12">
-            <div className="bg-primary/20 p-6 border-b border-white/10">
-              <h4 className="text-xl font-black text-center uppercase tracking-widest">Tabela de Referência: Gestão vs Investimento</h4>
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-gray-50 rounded-[3rem] border border-gray-100 overflow-hidden shadow-sm">
+            <div className="bg-primary p-8 text-white flex items-center justify-center gap-3">
+              <CircleDollarSign size={24} className="text-accent" />
+              <h4 className="text-xl font-bold tracking-tight">
+                Referência: Investimento em anúncios x Taxa de gestão
+              </h4>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-              {[
-                { inv: 'R$ 600 – R$ 799', fee: 'R$ 600' },
-                { inv: 'R$ 800 – R$ 999', fee: 'R$ 800' },
-                { inv: 'R$ 1.000 – R$ 1.999', fee: 'R$ 1.000' },
-                { inv: 'R$ 2.000 – R$ 3.999', fee: 'R$ 1.200' },
-                { inv: 'R$ 4.000 – R$ 9.999', fee: 'R$ 1.500' },
-                { inv: 'Acima de R$ 10.000', fee: '15% do investimento' },
-              ].map((row, i) => (
-                <div key={i} className="p-6 border-b md:border-r border-white/10 flex flex-col items-center justify-center text-center hover:bg-white/5 transition-colors">
-                  <span className="text-gray-400 text-xs font-bold uppercase mb-2">Investimento</span>
-                  <span className="text-white font-bold mb-3">{row.inv}</span>
-                  <div className="w-8 h-px bg-accent/30 mb-3"></div>
-                  <span className="text-gray-400 text-xs font-bold uppercase mb-2">Taxa de Gestão</span>
-                  <span className="text-accent font-black">{row.fee}</span>
+              {tiers.map((tier, i) => (
+                <div 
+                  key={i} 
+                  className="p-10 border-b border-gray-200 md:border-r last:border-r-0 flex flex-col items-center text-center hover:bg-white transition-colors duration-300"
+                >
+                  <div className="mb-6">
+                    <span className="block text-gray-400 text-xs font-black uppercase tracking-widest mb-1">
+                      Investimento
+                    </span>
+                    <span className="text-gray-900 text-xl font-black">
+                      {tier.inv}
+                    </span>
+                  </div>
+                  
+                  <div className="w-12 h-1 bg-accent/20 rounded-full mb-6"></div>
+                  
+                  <div>
+                    <span className="block text-gray-400 text-xs font-black uppercase tracking-widest mb-1">
+                      Taxa de Gestão
+                    </span>
+                    <span className="text-primary text-2xl font-black">
+                      {tier.fee}
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <p className="text-gray-400 text-sm text-center italic">
-            * Os valores de gestão são cobrados por plataforma (Google Ads ou Meta Ads). Exemplo: para gerenciar ambas as plataformas, o valor é duplicado.
-          </p>
+          <div className="mt-10 flex items-start gap-3 bg-blue-50/50 p-6 rounded-2xl border border-blue-100/50 max-w-3xl mx-auto">
+            <Info size={20} className="text-primary mt-1 flex-shrink-0" />
+            <p className="text-gray-500 text-sm md:text-base italic leading-relaxed">
+              Estes valores servem como referência inicial. Em casos específicos, podemos ajustar o plano conforme a estrutura do seu negócio, região atendida e objetivos das campanhas.
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -4,6 +4,7 @@ import Hero from './components/Hero.tsx';
 import { Features } from './components/Features.tsx';
 import { Proof } from './components/Proof.tsx';
 import Services from './components/Services.tsx';
+import { Pricing } from './components/Pricing.tsx';
 import Testimonials from './components/Testimonials.tsx';
 import Contact from './components/Contact.tsx';
 import Footer from './components/Footer.tsx';
@@ -42,6 +43,7 @@ const App: React.FC = () => {
         <Features />
         <Proof />
         <Services />
+        <Pricing />
         <Testimonials />
         <Contact />
       </main>
