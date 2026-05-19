@@ -5,8 +5,8 @@ const PainSection: React.FC = () => {
   const painPoints = [
     {
       icon: <TrendingDown className="w-8 h-8 text-red-500" />,
-      title: "Concentração de mercado nos grandes",
-      description: "As pessoas não pararam de precisar do seu serviço, elas apenas estão encontrando outras opções primeiro. Se você não aparece no momento da busca, sua empresa torna-se gradualmente invisível."
+      title: "Seus concorrentes estão aparecendo primeiro",
+      description: "As pessoas continuam precisando do seu serviço, mas elas podem estar encontrando outras opções antes da sua. Sem presença digital estratégica, sua empresa torna-se gradualmente invisível na sua região."
     },
     {
       icon: <Users className="w-8 h-8 text-orange-500" />,

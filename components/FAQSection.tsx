@@ -20,7 +20,7 @@ const faqItems = [
   },
   {
     question: "Preciso ter uma equipe ou estrutura pronta?",
-    answer: "Não. Você só precisa de alguém para atender os contatos que chegarem no WhatsApp. Todo o processo de criação de anúncios, configuração técnica e otimização das campanhas fica por nossa conta."
+    answer: "Não. O principal é ter alguém para atender bem os contatos recebidos. A M4 cuida da parte técnica, da gestão e das otimizações da campanha. Já os materiais visuais e criativos dos anúncios precisam ser disponibilizados pela empresa."
   },
   {
     question: "Em quanto tempo começo a ver resultados?",
