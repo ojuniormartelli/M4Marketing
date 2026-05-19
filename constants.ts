@@ -4,7 +4,7 @@ import { NavLink } from './types.ts';
 export const ASSETS = {
   LOGO: '/branding/logo.png',
   ABOUT_IMAGE: '/images/ads.png',
-  HERO_BG: '/images/hero-bg.jpg', // Placeholder para imagem de fundo do Hero
+  HERO_BG: '/images/hero-bg.png',
 };
 
 // Mantido apenas para compatibilidade legada se necessário
