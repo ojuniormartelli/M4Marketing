@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { DRIVE_IDS, getDriveUrl, WHATSAPP_LINK } from '../constants.ts';
+import { ASSETS, WHATSAPP_LINK } from '../constants.ts';
 import { Instagram, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const [imgError, setImgError] = useState(!DRIVE_IDS.LOGO || DRIVE_IDS.LOGO.includes('SEU_ID'));
+  const [imgError, setImgError] = useState(false);
 
   return (
     <footer className="bg-secondary text-gray-400 py-16 border-t border-gray-800">
@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           {!imgError ? (
             <div className="h-10 md:h-14 flex items-center justify-center">
               <img
-                src={getDriveUrl(DRIVE_IDS.LOGO)}
+                src={ASSETS.LOGO}
                 alt="M4 Marketing Digital"
                 className="h-full w-auto object-contain object-left max-w-[200px] md:max-w-[280px]"
                 onError={() => setImgError(true)}

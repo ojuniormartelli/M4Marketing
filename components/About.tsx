@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { WHATSAPP_LINK, DRIVE_IDS, getDriveUrl } from '../constants.ts';
+import { WHATSAPP_LINK, ASSETS } from '../constants.ts';
 import { Check } from 'lucide-react';
 
 const About: React.FC = () => {
-  const [imgError, setImgError] = useState(!DRIVE_IDS.ABOUT_IMAGE || DRIVE_IDS.ABOUT_IMAGE.includes('SEU_ID'));
+  const [imgError, setImgError] = useState(false);
 
   return (
     <section id="about" className="py-20 bg-white">
@@ -17,7 +17,7 @@ const About: React.FC = () => {
             <div className="relative rounded-[1.5rem] shadow-2xl w-full max-w-md bg-gray-50 flex items-center justify-center overflow-hidden border-8 border-white z-10 p-2 min-h-[400px]">
               {!imgError ? (
                 <img 
-                  src={getDriveUrl(DRIVE_IDS.ABOUT_IMAGE)} 
+                  src={ASSETS.ABOUT_IMAGE} 
                   alt="M4 Digital Consultoria" 
                   className="max-w-full max-h-full w-auto h-auto object-contain z-20 hover:scale-[1.02] transition-transform duration-500 rounded-lg"
                   onError={() => setImgError(true)}

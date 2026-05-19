@@ -1,9 +1,9 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import { DRIVE_IDS, getDriveUrl } from '../constants.ts';
+import { ASSETS } from '../constants.ts';
 
 const Hero: React.FC = () => {
-  const bgUrl = getDriveUrl(DRIVE_IDS.HERO_BG);
+  const bgUrl = ASSETS.HERO_BG;
 
   return (
     <section 
@@ -23,6 +23,7 @@ const Hero: React.FC = () => {
             alt="Background" 
             className="relative w-full h-full object-contain z-0 opacity-25 md:opacity-20 transition-opacity duration-1000"
             style={{ filter: 'brightness(0.5) contrast(1.1) grayscale(0.2)' }}
+            onError={(e) => (e.currentTarget.style.display = 'none')}
           />
           
           {/* Overlay gradiente para garantir contraste do texto branco */}

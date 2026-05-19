@@ -1,16 +1,16 @@
 import { NavLink } from './types.ts';
 
-// O formato 'thumbnail' com sz=w1000 é o mais confiável atualmente para exibir imagens do Drive em sites externos.
+// Caminhos dos Assets Locais (Pasta public)
+export const ASSETS = {
+  LOGO: '/branding/logo.png',
+  ABOUT_IMAGE: '/images/ads.png',
+  HERO_BG: '/images/hero-bg.jpg', // Placeholder para imagem de fundo do Hero
+};
+
+// Mantido apenas para compatibilidade legada se necessário
 export const getDriveUrl = (id: string) => {
   if (!id || id.includes('SEU_ID')) return '';
   return `https://drive.google.com/thumbnail?id=${id}&sz=w1000`;
-};
-
-// IDs das Imagens no Google Drive
-export const DRIVE_IDS = {
-  LOGO: '1FnU95sOHlgm2XLpnRHgaOduLldQOUewg', // ID atualizado conforme seu print
-  ABOUT_IMAGE: '11N17wBnHfEuBDg_qvShrcNakr93Fxbs4', 
-  HERO_BG: '19H30G7vjiurvfXOcaLmQ2FvGLORe0AAF',
 };
 
 export const NAVIGATION_LINKS: NavLink[] = [

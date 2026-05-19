@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { NAVIGATION_LINKS, WHATSAPP_LINK, DRIVE_IDS, getDriveUrl } from '../constants.ts';
+import { WHATSAPP_LINK, ASSETS } from '../constants.ts';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [imgError, setImgError] = useState(!DRIVE_IDS.LOGO || DRIVE_IDS.LOGO.includes('SEU_ID'));
+  const [imgError, setImgError] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +26,7 @@ const Header: React.FC = () => {
           {!imgError ? (
             <div className="h-10 md:h-14 flex items-center">
               <img
-                src={getDriveUrl(DRIVE_IDS.LOGO)}
+                src={ASSETS.LOGO}
                 alt="M4 Marketing Digital"
                 className="h-full w-auto object-contain object-left max-w-[200px] md:max-w-[280px]"
                 onError={() => setImgError(true)}
