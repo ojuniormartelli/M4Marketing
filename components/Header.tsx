@@ -42,23 +42,20 @@ const Header: React.FC = () => {
           )}
         </a>
 
-        <nav className="hidden md:flex items-center space-x-8">
-          {NAVIGATION_LINKS.map((link) => (
-            <a 
-              key={link.label} 
-              href={link.href}
-              className="font-medium text-gray-700 hover:text-accent transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
+        <nav className="hidden md:flex items-center space-x-12">
+          <a 
+            href="#pricing"
+            className="font-bold text-sm uppercase tracking-widest text-gray-700 hover:text-accent transition-colors"
+          >
+            Investimento
+          </a>
           <a 
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent hover:bg-accentHover text-white font-bold py-2 px-6 rounded-full transition-all transform hover:-translate-y-0.5"
+            className="bg-accent hover:bg-accentHover text-white font-black py-3 px-8 rounded-full shadow-lg shadow-accent/25 transition-all transform hover:-translate-y-1"
           >
-            Fale Agora
+            Diagnóstico Estratégico
           </a>
         </nav>
 
@@ -72,25 +69,22 @@ const Header: React.FC = () => {
 
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white absolute top-full left-0 right-0 shadow-lg border-t border-gray-100 animate-fade-in">
-          <div className="flex flex-col py-4">
-            {NAVIGATION_LINKS.map((link) => (
-              <a 
-                key={link.label} 
-                href={link.href}
-                className="px-8 py-3 text-gray-800 font-medium hover:bg-gray-50 hover:text-primary"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.label}
-              </a>
-            ))}
+          <div className="flex flex-col py-6">
+            <a 
+              href="#pricing"
+              className="px-8 py-4 text-gray-800 font-bold uppercase tracking-widest text-sm hover:bg-gray-50 hover:text-primary"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Investimento
+            </a>
             <div className="px-8 pt-4">
                <a 
                 href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-center w-full bg-accent text-white font-bold py-3 rounded-md"
+                className="block text-center w-full bg-accent text-white font-black py-4 rounded-xl shadow-lg"
               >
-                Fale Agora
+                Diagnóstico Estratégico
               </a>
             </div>
           </div>

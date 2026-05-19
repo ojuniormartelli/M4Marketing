@@ -5,29 +5,29 @@ import { WHATSAPP_LINK } from '../constants.ts';
 const steps = [
   {
     number: "01",
-    title: 'Diagnóstico e Estratégia Local',
-    description: 'Analisamos sua oferta, quem são seus concorrentes diretos e como as pessoas buscam pelo seu serviço na sua cidade ou bairro. A partir disso, criamos o plano de ataque ideal para o seu orçamento.',
+    title: 'Estudo do Público Local',
+    description: 'Analisamos como as pessoas buscam pelo seu serviço na sua região. Identificamos as palavras-chave e canais onde seu cliente está mais presente no momento da decisão.',
     icon: Search,
     color: 'bg-blue-500'
   },
   {
     number: "02",
-    title: 'Configuração e Ativação',
-    description: 'Colocamos a mão na massa na parte técnica. Montamos seus anúncios no Google e na Meta Ads com foco total em converter o clique em mensagem no WhatsApp ou em uma ligação para sua empresa.',
+    title: 'Configuração Técnica',
+    description: 'Criamos seus anúncios com foco exclusivo em conversão. O objetivo aqui é diminuir a jornada entre a pesquisa do cliente e o primeiro contato no seu WhatsApp.',
     icon: Settings,
     color: 'bg-accent'
   },
   {
     number: "03",
-    title: 'Gestão e Otimização Diária',
-    description: 'Anúncio bom é anúncio acompanhado. Monitoramos suas campanhas diariamente, ajustando públicos, palavras-chave e verbas para garantir que você não jogue dinheiro fora e atraia apenas leads qualificados.',
+    title: 'Gestão de Orçamento',
+    description: 'Acompanhamos o desempenho diariamente. Ajustamos os anúncios para que sua verba seja direcionada para os públicos que trazem os melhores contatos para o seu negócio.',
     icon: TrendingUp,
     color: 'bg-indigo-500'
   },
   {
     number: "04",
-    title: 'Relatórios e Ajustes Estratégicos',
-    description: 'Apresentamos o que realmente importa: quantos contatos chegaram e qual foi o custo por oportunidade. Com base nisso, definimos juntos os próximos passos para escalar seus resultados conforme o seu negócio cresce.',
+    title: 'Relatórios de Resultados',
+    description: 'Mostramos o que realmente impacta o seu faturamento: quantos orçamentos foram solicitados e qual o custo por interessado. É a clareza que você precisa para crescer.',
     icon: BarChart3,
     color: 'bg-green-500'
   }
@@ -38,12 +38,12 @@ const Services: React.FC = () => {
     <section id="methodology" className="py-24 bg-gray-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20 fade-in-section">
-          <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-4">Metodologia</h2>
+          <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-4">Nossa Metodologia</h2>
           <h3 className="text-3xl md:text-5xl font-black text-primary leading-tight tracking-tighter mb-6">
-            Como vamos fazer sua empresa vender mais
+            Como estruturamos sua presença digital
           </h3>
           <p className="text-gray-600 text-lg md:text-xl font-medium">
-            Um processo simples e direto, desenhado para o empresário local que não quer complicação técnica, apenas contatos reais no balcão e no WhatsApp.
+            Um processo claro e direto para o empresário que busca estruturar sua presença digital e atrair novos interessados, sem se preocupar com a complexidade técnica dos anúncios.
           </p>
         </div>
 
@@ -79,7 +79,7 @@ const Services: React.FC = () => {
           
           <div className="relative z-10 max-w-3xl mx-auto">
             <h4 className="text-2xl md:text-3xl font-bold mb-10 leading-relaxed italic opacity-90">
-              "Se fizer sentido para você, o próximo passo é uma conversa rápida para entender seu negócio e ver se a M4 é a parceira certa."
+              "O próximo passo é uma conversa estratégica para entendermos sua operação e alinhar expectativas de crescimento."
             </h4>
             
             <a 
@@ -88,7 +88,7 @@ const Services: React.FC = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-accent hover:bg-accentHover text-white text-xl font-black py-6 px-12 rounded-full shadow-2xl transition-all duration-300 transform hover:-translate-y-1 gap-3 group"
             >
-              Falar com o Especialista Agora
+              Iniciar Diagnóstico Estratégico
               <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
             </a>
           </div>

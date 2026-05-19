@@ -1,32 +1,32 @@
 import React from 'react';
-import { Zap, Shield, Smartphone, Globe, BarChart, Layers, Target, Headphones } from 'lucide-react';
+import { Zap, Shield, Smartphone, Globe, BarChart, Layers, Target, Headphones, Search } from 'lucide-react';
 import { Feature } from '../types';
 
 const features: Feature[] = [
   {
-    title: 'Anúncios para quem quer comprar',
-    description: 'Chega de aparecer para curiosos. Configuramos suas campanhas no Google e na Meta para alcançar pessoas que já estão buscando pelo seu serviço ou produto na sua região agora mesmo.',
+    title: 'Foco em Novos Orçamentos',
+    description: 'Nossa gestão é orientada para que você receba mensagens de quem realmente quer comprar. Não focamos em métricas de vaidade como curtidas ou seguidores.',
     iconName: 'Target'
   },
   {
-    title: 'Relatórios sem "marketês"',
-    description: 'Nada de termos técnicos que você não entende. Você acompanha o desempenho através de dados claros: quantos orçamentos chegaram e qual o seu retorno real.',
+    title: 'Anúncios Geocalizados',
+    description: 'Seu anúncio aparece apenas para quem está no seu raio de atendimento. Economizamos sua verba evitando cliques de pessoas que não podem se tornar clientes.',
+    iconName: 'Globe'
+  },
+  {
+    title: 'Anúncios na Hora da Busca',
+    description: 'Trabalhamos para que sua empresa seja encontrada no Google no momento em que o cliente pesquisa pela solução que você oferece.',
+    iconName: 'Search'
+  },
+  {
+    title: 'Acompanhamento Semanal',
+    description: 'O tráfego pago exige atenção constante. Revisamos suas campanhas semanalmente para buscar o melhor custo por contato e maximizar o retorno.',
     iconName: 'BarChart'
-  },
-  {
-    title: 'Suas campanhas nunca param',
-    description: 'O mercado digital muda rápido. Fazemos otimizações frequentes para garantir que seu investimento esteja sempre gerando o máximo de contatos pelo menor custo.',
-    iconName: 'Zap'
-  },
-  {
-    title: 'Parceria direta e estratégica',
-    description: 'Você não fala com robôs ou estagiários. Aqui você tem contato direto com quem planeja e executa suas campanhas, garantindo agilidade e foco no seu resultado.',
-    iconName: 'Headphones'
   }
 ];
 
 const IconMap: Record<string, React.FC<any>> = {
-  Zap, Shield, Smartphone, Globe, BarChart, Layers, Target, Headphones
+  Zap, Shield, Smartphone, Globe, BarChart, Layers, Target, Headphones, Search
 };
 
 export const Features: React.FC = () => {
@@ -36,7 +36,7 @@ export const Features: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-4">Vantagens</h2>
           <h3 className="text-3xl md:text-5xl font-black leading-tight tracking-tighter text-primary">
-            Tudo o que você precisa para atrair clientes todos os dias
+            Estratégia focada em atrair contatos qualificados para o seu negócio
           </h3>
           <p className="mt-6 text-lg md:text-xl text-gray-600 font-medium">
             Enquanto você cuida da operação do seu negócio, a M4 cuida da inteligência dos anúncios para trazer orçamentos qualificados.

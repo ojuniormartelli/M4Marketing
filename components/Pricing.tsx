@@ -15,22 +15,27 @@ export const Pricing: React.FC = () => {
     <section id="pricing" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 fade-in-section">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-4">Investimento Local</h2>
+          <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-4">Investimento Transparente</h2>
           <h3 className="text-3xl md:text-5xl font-black text-primary leading-tight tracking-tighter mb-6">
-            Quanto investir para anunciar com a M4
+            Estrutura de custos simples
           </h3>
-          <p className="text-gray-600 text-lg md:text-xl font-medium">
-            Trabalhamos com valores transparentes e proporcionais ao momento do seu negócio. A taxa de gestão acompanha o valor investido em anúncios, mantendo um modelo justo tanto para quem está começando quanto para quem já quer acelerar.
+          <p className="text-gray-600 text-lg md:text-xl font-medium leading-relaxed">
+            Transparência é a base da nossa parceria. O seu investimento mensal divide-se em duas partes: a verba que você paga diretamente às plataformas (Google/Meta) e a taxa de serviço da M4 pela gestão estratégica.
           </p>
         </div>
 
         <div className="max-w-5xl mx-auto">
           <div className="bg-gray-50 rounded-[3rem] border border-gray-100 overflow-hidden shadow-sm">
-            <div className="bg-primary p-8 text-white flex items-center justify-center gap-3">
-              <CircleDollarSign size={24} className="text-accent" />
-              <h4 className="text-xl font-bold tracking-tight">
-                Referência: Investimento em anúncios x Taxa de gestão
-              </h4>
+            <div className="bg-primary p-8 text-white flex flex-col items-center justify-center gap-2">
+              <div className="flex items-center gap-3">
+                <CircleDollarSign size={24} className="text-accent" />
+                <h4 className="text-xl font-bold tracking-tight">
+                  Tabela de Referência Mensal
+                </h4>
+              </div>
+              <p className="text-blue-200/60 text-xs font-bold uppercase tracking-widest text-center mt-2">
+                Valores de mídia (Google/Meta) + Taxa de Trabalho da M4
+              </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -40,8 +45,8 @@ export const Pricing: React.FC = () => {
                   className="p-10 border-b border-gray-200 md:border-r last:border-r-0 flex flex-col items-center text-center hover:bg-white transition-colors duration-300"
                 >
                   <div className="mb-6">
-                    <span className="block text-gray-400 text-xs font-black uppercase tracking-widest mb-1">
-                      Investimento
+                    <span className="block text-gray-400 text-[10px] font-black uppercase tracking-widest mb-1">
+                      Verba para Google/Meta
                     </span>
                     <span className="text-gray-900 text-xl font-black">
                       {tier.inv}
@@ -51,8 +56,8 @@ export const Pricing: React.FC = () => {
                   <div className="w-12 h-1 bg-accent/20 rounded-full mb-6"></div>
                   
                   <div>
-                    <span className="block text-gray-400 text-xs font-black uppercase tracking-widest mb-1">
-                      Taxa de Gestão
+                    <span className="block text-gray-400 text-[10px] font-black uppercase tracking-widest mb-1">
+                      Taxa de Gestão M4
                     </span>
                     <span className="text-primary text-2xl font-black">
                       {tier.fee}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { DRIVE_IDS, getDriveUrl } from '../constants.ts';
+import { DRIVE_IDS, getDriveUrl, WHATSAPP_LINK } from '../constants.ts';
 import { Instagram, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
           )}
         </div>
         <p className="mb-6 max-w-md mx-auto text-sm leading-relaxed text-gray-500">
-          Estratégias digitais personalizadas para fazer seu negócio local crescer com solidez e previsibilidade através de tráfego pago e SEO local.
+          Estratégias de tráfego pago focadas em conectar o seu negócio local com o cliente que está buscando pela sua solução hoje.
         </p>
 
         <div className="flex flex-col items-center gap-4 mb-10">
@@ -49,10 +49,10 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="flex justify-center gap-8 mb-12 text-xs font-black flex-wrap uppercase tracking-[0.2em] text-gray-300">
-          <a href="#home" className="hover:text-accent transition-colors">Início</a>
-          <a href="#services" className="hover:text-accent transition-colors">Serviços</a>
-          <a href="#about" className="hover:text-accent transition-colors">Sobre</a>
+          <a href="#pricing" className="hover:text-accent transition-colors">Investimento</a>
+          <a href="#testimonials" className="hover:text-accent transition-colors">Resultados</a>
           <a href="#contact" className="hover:text-accent transition-colors">Contato</a>
+          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a>
         </div>
         <div className="w-12 h-1 bg-primary/30 mx-auto mb-10 rounded-full"></div>
         <p className="text-[10px] text-gray-600 font-bold uppercase tracking-widest">

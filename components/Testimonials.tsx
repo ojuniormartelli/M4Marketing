@@ -28,12 +28,12 @@ const Testimonials: React.FC = () => {
     <section id="testimonials" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 fade-in-section">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-4">Resultados Reais</h2>
+          <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-4">Empresas Reais</h2>
           <h3 className="text-3xl md:text-5xl font-black text-primary leading-tight tracking-tighter">
-            O que dizem os empresários que trabalham com a M4
+            Parcerias que geram resultado
           </h3>
-          <p className="mt-6 text-lg text-gray-600 font-medium">
-            Negócios locais que pararam de postar por postar e começaram a investir em anúncios que trazem clientes.
+          <p className="mt-6 text-lg text-gray-600 font-medium leading-relaxed">
+            Estes são relatos reais de empresários locais que decidiram profissionalizar sua presença digital e hoje colhem frutos de uma estratégia sólida de anúncios.
           </p>
         </div>
         

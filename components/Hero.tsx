@@ -44,50 +44,50 @@ const Hero: React.FC = () => {
       <div className="max-w-6xl mx-auto px-6 relative z-30 text-center fade-in-section">
         <div className="max-w-4xl mx-auto">
           <span className="inline-block bg-white border border-accent/30 px-4 py-1.5 rounded-full text-lg font-bold mb-6 text-accent backdrop-blur-md shadow-sm">
-            Especialista em Negócios Locais
+            Estratégias de anúncios para conectar sua empresa ao cliente local.
           </span>
           
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-8 drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)]">
-            Gestão de anúncios no Google e Meta Ads para negócios locais que precisam de <span className="text-accent text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400">mais orçamentos e clientes</span> na sua cidade.
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-7xl font-extrabold leading-tight mb-8 drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] text-balance">
+            Seja encontrado por quem já está <span className="text-accent text-transparent bg-clip-text bg-gradient-to-r from-accent to-blue-400">buscando pelo seu serviço.</span>
           </h1>
           
           <p className="text-lg md:text-2xl text-blue-50 mb-12 max-w-3xl mx-auto leading-relaxed font-medium drop-shadow-md">
-            Pare de gastar dinheiro com anúncios que geram apenas curtidas e comentários vazios. A M4 gerencia seus anúncios para atrair contatos reais e qualificados no seu WhatsApp, telefone ou balcão, focando no que realmente importa: o seu faturamento.
+            Gerenciamos seus anúncios no Google e Meta Ads com foco em uma meta clara: construir um canal eficiente para que novos interessados cheguem até o seu canal de atendimento.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
             <a 
               href="#contact"
-              className="w-full sm:w-auto bg-accent hover:bg-accentHover text-white text-xl font-bold py-5 px-12 rounded-full shadow-lg shadow-accent/20 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2"
+              className="w-full sm:w-auto bg-accent hover:bg-accentHover text-white text-xl font-black py-6 px-14 rounded-full shadow-xl shadow-accent/25 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2 text-center"
             >
-              Quero atrair mais clientes qualificados
+              Diagnóstico Estratégico Gratuito
               <ArrowRight size={24} />
             </a>
             <a 
               href="#methodology"
-              className="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/20 text-white text-xl font-semibold py-5 px-12 rounded-full backdrop-blur-sm transition-all duration-300 flex items-center justify-center"
+              className="text-white/70 hover:text-white font-bold text-lg border-b border-white/20 hover:border-white transition-all pb-1"
             >
-              Ver como funciona na prática
+              Como funciona nossa estratégia
             </a>
           </div>
 
-          <p className="text-blue-200/80 text-sm md:text-base italic mb-16 font-medium">
-            Atendimento direto e estratégico, sem "marketês", focado 100% no seu retorno.
+          <p className="text-blue-200/60 text-sm md:text-base font-bold uppercase tracking-[0.2em] mb-16">
+            Gestão estratégica de anúncios • Foco em desenvolvimento de negócios
           </p>
 
-          {/* Contador de Resultados */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 py-8 border-y border-white/10 max-w-3xl mx-auto">
+          {/* Indicadores de Confiança */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 py-10 border-y border-white/10 max-w-3xl mx-auto">
             <div className="flex flex-col items-center">
-              <span className="text-accent text-3xl md:text-4xl font-black mb-1">R$ 20 Mil+</span>
-              <span className="text-blue-200 text-xs font-bold uppercase tracking-widest">Gerenciados</span>
+              <span className="text-accent text-lg md:text-xl font-black mb-1 uppercase tracking-tighter">Investimento Consciente</span>
+              <span className="text-blue-200/60 text-[10px] font-bold uppercase tracking-[0.2em]">Foco em Orçamentos</span>
             </div>
             <div className="flex flex-col items-center border-x border-white/10 px-4">
-              <span className="text-accent text-3xl md:text-4xl font-black mb-1">100 Mil+</span>
-              <span className="text-blue-200 text-xs font-bold uppercase tracking-widest">Oportunidades Geradas</span>
+              <span className="text-accent text-lg md:text-xl font-black mb-1 uppercase tracking-tighter">Suporte Direto</span>
+              <span className="text-blue-200/60 text-[10px] font-bold uppercase tracking-[0.2em]">Sem intermediários</span>
             </div>
             <div className="flex flex-col items-center">
-              <span className="text-accent text-3xl md:text-4xl font-black mb-1">98%</span>
-              <span className="text-blue-200 text-xs font-bold uppercase tracking-widest">Satisfação</span>
+              <span className="text-accent text-lg md:text-xl font-black mb-1 uppercase tracking-tighter">Relatórios Periódicos</span>
+              <span className="text-blue-200/60 text-[10px] font-bold uppercase tracking-[0.2em]">Dados reais de desempenho</span>
             </div>
           </div>
 

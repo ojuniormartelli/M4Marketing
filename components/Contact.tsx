@@ -15,16 +15,16 @@ const Contact: React.FC = () => {
             <div className="fade-in-section">
               <span className="text-accent font-black tracking-widest uppercase text-sm mb-6 block">Próximo Passo</span>
               <h2 className="text-3xl md:text-5xl font-black leading-tight tracking-tighter mb-8">
-                Pronto para atrair mais clientes para o seu negócio local?
+                Pronto para profissionalizar sua aquisição de clientes?
               </h2>
               <p className="text-blue-100 text-lg md:text-xl leading-relaxed mb-10 opacity-90">
-                Se você quer parar de depender só de indicação e começar a ter um fluxo constante de contatos pelo Google e pelas redes, o próximo passo é simples. Vamos fazer uma conversa rápida para entender seu negócio, ver se a M4 é a parceira certa e qual é o melhor plano para começar.
+                Se você quer profissionalizar sua captação de clientes na sua região, o próximo passo é uma conversa estratégica. Vamos analisar seu cenário e ser transparentes sobre o potencial de desenvolvimento do seu negócio com anúncios.
               </p>
               
               <div className="space-y-4">
                 {[
                   { icon: ShieldCheck, text: "Atendimento direto com especialista" },
-                  { icon: Zap, text: "Foco 100% em ROI e faturamento" },
+                  { icon: Zap, text: "Foco em desempenho e oportunidades" },
                   { icon: Clock, text: "Sem contratos abusivos ou burocracia" }
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 text-blue-100/80">
@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
                   <MessageCircle size={40} />
                 </div>
                 
-                <h4 className="text-2xl font-black mb-6">Inicie sua consultoria gratuita agora</h4>
+                <h4 className="text-2xl font-black mb-6">Solicite um diagnóstico estratégico</h4>
                 
                 <a 
                   href={WHATSAPP_LINK}
@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
                   className="w-full bg-accent hover:bg-accentHover text-white text-xl font-black py-6 px-4 rounded-2xl shadow-xl transition-all duration-300 transform hover:-translate-y-1 block mb-4 group"
                 >
                   <span className="flex items-center justify-center gap-3">
-                    Falar com o especialista agora
+                    Diagnóstico no WhatsApp
                     <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
                   </span>
                 </a>
