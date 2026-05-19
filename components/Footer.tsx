@@ -50,8 +50,6 @@ const Footer: React.FC = () => {
 
         <div className="flex justify-center gap-8 mb-12 text-xs font-black flex-wrap uppercase tracking-[0.2em] text-gray-300">
           <a href="#pricing" className="hover:text-accent transition-colors">Investimento</a>
-          <a href="#testimonials" className="hover:text-accent transition-colors">Resultados</a>
-          <a href="#contact" className="hover:text-accent transition-colors">Contato</a>
           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a>
         </div>
         <div className="w-12 h-1 bg-primary/30 mx-auto mb-10 rounded-full"></div>

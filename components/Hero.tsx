@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <p className="text-lg md:text-2xl text-blue-50 mb-12 max-w-3xl mx-auto leading-relaxed font-medium drop-shadow-md">
-            Gerenciamos seus anúncios no Google e Meta Ads com foco em uma meta clara: construir um canal eficiente para que novos interessados cheguem até o seu canal de atendimento.
+            Gerenciamos seus anúncios no Google e Meta Ads com o objetivo de aproximar sua empresa de pessoas da sua região que já buscam pelo seu serviço.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
@@ -72,22 +72,22 @@ const Hero: React.FC = () => {
           </div>
 
           <p className="text-blue-200/60 text-sm md:text-base font-bold uppercase tracking-[0.2em] mb-16">
-            Gestão estratégica de anúncios • Foco em desenvolvimento de negócios
+            Gestão estratégica de anúncios • Foco em geração de contatos
           </p>
 
           {/* Indicadores de Confiança */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 py-10 border-y border-white/10 max-w-3xl mx-auto">
             <div className="flex flex-col items-center">
-              <span className="text-accent text-lg md:text-xl font-black mb-1 uppercase tracking-tighter">Investimento Consciente</span>
-              <span className="text-blue-200/60 text-[10px] font-bold uppercase tracking-[0.2em]">Foco em Orçamentos</span>
+              <span className="text-accent text-lg md:text-xl font-black mb-1 uppercase tracking-tighter">Investimento Estratégico</span>
+              <span className="text-blue-200/60 text-[10px] font-bold uppercase tracking-[0.2em]">Foco em Contatos</span>
             </div>
             <div className="flex flex-col items-center border-x border-white/10 px-4">
               <span className="text-accent text-lg md:text-xl font-black mb-1 uppercase tracking-tighter">Suporte Direto</span>
               <span className="text-blue-200/60 text-[10px] font-bold uppercase tracking-[0.2em]">Sem intermediários</span>
             </div>
             <div className="flex flex-col items-center">
-              <span className="text-accent text-lg md:text-xl font-black mb-1 uppercase tracking-tighter">Relatórios Periódicos</span>
-              <span className="text-blue-200/60 text-[10px] font-bold uppercase tracking-[0.2em]">Dados reais de desempenho</span>
+              <span className="text-accent text-lg md:text-xl font-black mb-1 uppercase tracking-tighter">Relatórios Claros</span>
+              <span className="text-blue-200/60 text-[10px] font-bold uppercase tracking-[0.2em]">Desempenho Comercial</span>
             </div>
           </div>
 
@@ -98,7 +98,7 @@ const Hero: React.FC = () => {
             </div>
             <div className="flex items-center gap-2 opacity-80">
               <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-              Meta Ads Expert
+              Gestão Especializada
             </div>
           </div>
         </div>

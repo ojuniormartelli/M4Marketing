@@ -13,8 +13,8 @@ const CTA: React.FC = () => {
       <div className="max-w-5xl mx-auto px-6 relative z-10 text-center fade-in-section">
         <div className="bg-gradient-to-br from-white/10 to-white/5 p-12 md:p-20 rounded-[3rem] border border-white/10 backdrop-blur-xl shadow-2xl">
           <h2 className="text-3xl md:text-5xl font-black text-white mb-8 leading-tight tracking-tighter">
-            Vamos avaliar se a sua empresa <br className="hidden md:block" />
-            <span className="text-accent">pode crescer com anúncios?</span>
+            Vale analisar se sua empresa já tem <br className="hidden md:block" />
+            <span className="text-accent">cenário para crescer com anúncios?</span>
           </h2>
           
           <p className="text-blue-100/80 text-xl md:text-2xl mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
@@ -36,7 +36,7 @@ const CTA: React.FC = () => {
           <div className="mt-12 flex flex-wrap justify-center gap-8 text-blue-200/40 font-bold uppercase tracking-widest text-xs">
             <span className="flex items-center gap-2">✓ Sem fidelidade obrigatória</span>
             <span className="flex items-center gap-2">✓ Transparência total</span>
-            <span className="flex items-center gap-2">✓ Foco em ROI</span>
+            <span className="flex items-center gap-2">✓ Foco em retorno e eficiência</span>
           </div>
         </div>
       </div>

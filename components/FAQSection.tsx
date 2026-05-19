@@ -8,7 +8,7 @@ const faqItems = [
   },
   {
     question: "E se eu já tiver impulsionado posts e não funcionou?",
-    answer: "O botão 'impulsionar' é desenhado para gerar curtidas, não necessariamente orçamentos. Nós trabalhamos com o Gerenciador de Anúncios profissional, usando estratégias de busca e conversão que são muito mais precisas e focadas em vendas."
+    answer: "O botão 'impulsionar' é uma ferramenta simplificada para alcance rápido. Nós utilizamos o Gerenciador Profissional para criar campanhas baseadas em intenção de busca, o que permite um direcionamento muito mais técnico e voltado para o interesse real do cliente."
   },
   {
     question: "Quanto preciso investir para começar?",
@@ -16,7 +16,7 @@ const faqItems = [
   },
   {
     question: "Funciona para minha cidade? É pequena.",
-    answer: "Cidades menores costumam ter uma concorrência menor no digital. Isso significa que, com um investimento estratégico, sua empresa ganha mais visibilidade no Google e nas redes sociais da sua região."
+    answer: "Cidades menores costumam ter uma concorrência digital reduzida. Isso possibilita que, com uma gestão cuidadosa da verba, sua empresa consiga uma visibilidade consistente no Google e nas redes sociais locais."
   },
   {
     question: "Preciso ter uma equipe ou estrutura pronta?",
@@ -24,7 +24,7 @@ const faqItems = [
   },
   {
     question: "Em quanto tempo começo a ver resultados?",
-    answer: "As campanhas costumam estar ativas em até 48h após a configuração técnica. O objetivo é estabelecer o fluxo de contatos de forma gradual e sustentável, focando em quem já busca pela sua solução."
+    answer: "Concluída a etapa técnica inicial, as campanhas podem entrar em operação em poucos dias. O foco é estabelecer a presença digital de forma organizada, priorizando a atração de quem já busca pelo seu serviço."
   }
 ];
 

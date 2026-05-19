@@ -3,23 +3,23 @@ import { Search, Target, BarChart3, Users } from 'lucide-react';
 
 const stats = [
   {
-    label: "Google & Meta Ads",
-    description: "Configurações avançadas de pixel e conversões para garantir que cada centavo seja rastreado e otimizado.",
+    label: "Gestão Google & Meta",
+    description: "Estrutura técnica completa para que cada investimento seja acompanhado e otimizado com transparência.",
     icon: Search
   },
   {
-    label: "Foco em Negócio Local",
+    label: "Estratégia Local",
     description: "Abordagem especializada para quem atende por raio de distância, bairro ou cidade específica.",
     icon: Target
   },
   {
     label: "Sem 'Marketês'",
-    description: "Você recebe relatórios que mostram o que importa: quantas pessoas chamaram e quanto custou cada contato.",
+    description: "Você recebe relatórios que mostram o que importa: o número de contatos e o desempenho comercial da sua conta.",
     icon: BarChart3
   },
   {
     label: "Parceria Direta",
-    description: "Você fala direto com quem gerencia sua conta. Sem atendentes que não entendem de tráfego.",
+    description: "Você fala direto com quem gerencia sua estratégia. Sem intermediários que não entendem do seu negócio.",
     icon: Users
   }
 ];
@@ -37,7 +37,7 @@ export const Proof: React.FC = () => {
             O que você pode esperar da nossa parceria
           </h3>
           <p className="text-blue-100/80 text-lg md:text-xl font-medium leading-relaxed">
-            Atuamos como um parceiro estratégico na aquisição de clientes. Oferecemos transparência total na gestão da sua verba e foco em converter cliques em oportunidades de negócio.
+            Atuamos como um parceiro estratégico na geração de oportunidades. Oferecemos transparência total na gestão da sua verba e foco em melhorar a presença da sua empresa para gerar mais oportunidades de contato.
           </p>
         </div>
 

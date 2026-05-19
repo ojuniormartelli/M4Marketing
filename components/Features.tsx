@@ -4,23 +4,23 @@ import { Feature } from '../types';
 
 const features: Feature[] = [
   {
-    title: 'Foco em Novos Orçamentos',
-    description: 'Nossa gestão é orientada para que você receba mensagens de quem realmente quer comprar. Não focamos em métricas de vaidade como curtidas ou seguidores.',
+    title: 'Foco em Geração de Contatos',
+    description: 'Nossa gestão é orientada para que você receba mensagens de quem realmente demonstra interesse no seu serviço. Priorizamos contatos reais em vez de métricas de curtidas.',
     iconName: 'Target'
   },
   {
     title: 'Anúncios Geocalizados',
-    description: 'Seu anúncio aparece apenas para quem está no seu raio de atendimento. Economizamos sua verba evitando cliques de pessoas que não podem se tornar clientes.',
+    description: 'Sua empresa aparece apenas para quem está no seu raio de atendimento. Otimizamos sua verba concentrando os anúncios onde o seu negócio realmente atua.',
     iconName: 'Globe'
   },
   {
-    title: 'Anúncios na Hora da Busca',
-    description: 'Trabalhamos para que sua empresa seja encontrada no Google no momento em que o cliente pesquisa pela solução que você oferece.',
+    title: 'Visibilidade na Hora da Busca',
+    description: 'Trabalhamos para que sua empresa seja encontrada no Google no momento exato em que o cliente procura pela solução que você oferece.',
     iconName: 'Search'
   },
   {
-    title: 'Acompanhamento Semanal',
-    description: 'O tráfego pago exige atenção constante. Revisamos suas campanhas semanalmente para buscar o melhor custo por contato e maximizar o retorno.',
+    title: 'Acompanhamento Frequente',
+    description: 'O tráfego pago exige atenção constante. Monitoramos suas campanhas regularmente para buscar o melhor custo por contato e manter a qualidade dos anúncios.',
     iconName: 'BarChart'
   }
 ];
@@ -36,10 +36,10 @@ export const Features: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-4">Vantagens</h2>
           <h3 className="text-3xl md:text-5xl font-black leading-tight tracking-tighter text-primary">
-            Estratégia focada em atrair contatos qualificados para o seu negócio
+            Presença digital para conectar sua empresa ao cliente local
           </h3>
           <p className="mt-6 text-lg md:text-xl text-gray-600 font-medium">
-            Enquanto você cuida da operação do seu negócio, a M4 cuida da inteligência dos anúncios para trazer orçamentos qualificados.
+            Enquanto você cuida da operação do seu negócio, a M4 cuida da inteligência dos anúncios para atrair pessoas com mais intenção de contratar.
           </p>
         </div>
 

@@ -15,10 +15,10 @@ const Contact: React.FC = () => {
             <div className="fade-in-section">
               <span className="text-accent font-black tracking-widest uppercase text-sm mb-6 block">Próximo Passo</span>
               <h2 className="text-3xl md:text-5xl font-black leading-tight tracking-tighter mb-8">
-                Pronto para profissionalizar sua aquisição de clientes?
+                Pronto para organizar sua geração de contatos?
               </h2>
               <p className="text-blue-100 text-lg md:text-xl leading-relaxed mb-10 opacity-90">
-                Se você quer profissionalizar sua captação de clientes na sua região, o próximo passo é uma conversa estratégica. Vamos analisar seu cenário e ser transparentes sobre o potencial de desenvolvimento do seu negócio com anúncios.
+                Se você busca estruturar melhor a captação de oportunidades comerciais na sua região, o próximo passo é uma conversa estratégica. Vamos avaliar com clareza se o tráfego pago pode contribuir para a sua operação hoje.
               </p>
               
               <div className="space-y-4">

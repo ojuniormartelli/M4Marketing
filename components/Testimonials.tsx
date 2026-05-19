@@ -30,10 +30,10 @@ const Testimonials: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-accent font-bold tracking-wider uppercase text-sm mb-4">Empresas Reais</h2>
           <h3 className="text-3xl md:text-5xl font-black text-primary leading-tight tracking-tighter">
-            Parcerias que geram resultado
+            Relatos de empresários locais atendidos
           </h3>
           <p className="mt-6 text-lg text-gray-600 font-medium leading-relaxed">
-            Estes são relatos reais de empresários locais que decidiram profissionalizar sua presença digital e hoje colhem frutos de uma estratégia sólida de anúncios.
+            Estes são relatos reais de empresários locais que decidiram profissionalizar sua presença digital e hoje mantêm uma presença digital mais estruturada.
           </p>
         </div>
         
